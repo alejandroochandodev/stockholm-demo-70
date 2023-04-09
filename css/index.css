@@ -1,0 +1,672 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    box-sizing: border-box;
+    /* outline: 2px red ridge; */
+
+}
+
+*::before , *::after {
+    display: block;
+}
+
+li {
+    list-style: none;
+}
+
+form , input , button , select , option , textarea , label {
+    display: block;
+    font-family: inherit;
+    font-size: inherit;
+    background-color: transparent;
+    appearance: none;
+
+}
+
+a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+img , iframe {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+}
+
+svg {
+    display: block;
+}
+
+span {
+    display: block;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.Wrapper {
+    width: 90%;
+    margin: auto;
+}
+
+.Header {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: fixed;
+    z-index: 1;
+}
+
+.Header-contenedor {
+    padding: 2rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    animation: fadeDown 2s ease 1 both;
+}
+
+.Header-hamburguesa {
+    width: 2rem;
+    display: none;
+}
+
+.Header-logo {
+    width: 2.5rem;
+}
+
+.Header-nav {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3.125rem;
+}
+
+.Header-ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3.125rem;
+}
+
+.Header-li {
+    color: #6a533e;
+}
+
+.Header-li:hover {
+    color: #d6b99d;
+}
+
+.Header-menu {
+    color: #6a533e;
+    width: 2rem;
+}
+
+.Header-menu:hover {
+    color: #d6b99d;
+}
+
+.Header-mobile {
+    width: 100%;
+    padding: .625rem 2.375rem;
+    background-color: white;
+}
+
+.mobile {
+    height: 0;
+    overflow: hidden;
+    transition: all 0.7s ease;
+}
+
+@media (max-width: 800px) {
+    .Header-hamburguesa {
+        display: block;
+    }
+    .pc {
+        display: none;
+    }
+    .Header-h1 {
+        margin: auto;
+    }
+    .mobile.isActive {
+        height: 40vh;
+    }
+    .Header-ul {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 2.5rem;
+    }
+    .Header-nav {
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+}
+
+.Main {
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    grid-template-rows: repeat(4 , 1fr);
+    min-height: 60%;
+    padding-top: 6.625rem;
+    overflow: hidden;
+}
+
+.Hear {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+    background: url("https://stockholm70.qodeinteractive.com/wp-content/uploads/2020/07/main-img-1.jpg") center / cover;
+    padding: 3.125rem 0 0 3.125rem;
+    animation: fadeRight 2s ease 1 both;
+}
+
+.Hear-h2 {
+    font-size: 4.375rem;
+    color: white;
+    margin-bottom: 1.25rem;
+}
+
+.Hear-p {
+    color: white;
+    max-width: 23.75rem;
+    margin-bottom: 2.5rem;
+    font-size: 1.1875rem;
+    line-height: 1.875rem;
+}
+
+.Hear-a {
+    color: white;
+    display: inline;
+    background-color: #d6b99d;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+}
+
+.App {
+    text-align: center;
+    background-color: #f5ece0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    animation: fadeUp 2s ease 1 both;
+}
+
+.App-h2 {
+    color: #8f6843;
+    font-size: 2.1875rem;
+    max-width: 9.375rem;
+    margin-bottom: 1.25rem;
+}
+
+.App-a {
+    background-color: white;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+}
+
+.App-a:hover {
+    color: white;
+    background-color: #d6b99d;
+}
+
+.Video {
+    background: url("https://stockholm70.qodeinteractive.com/wp-content/uploads/2020/07/about-img-1.jpg") center / cover;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    animation: fadeUp 1.5s ease 1 0.5s both;
+}
+
+.Video-circle {
+    width: 10.625rem;
+    height: 10.625rem;
+    border: .125rem solid white;
+    border-radius: 50%;
+    padding: 1.25rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+
+.Video-play {
+    width: 3.125rem;
+    color: white;   
+}
+
+.Sinborde {
+    opacity: 0;
+    position: absolute;
+}
+
+.Video-circle:hover .Video-play {
+    opacity: 0;
+}
+
+.Video-circle:hover .Sinborde {
+    opacity: 1;
+}
+
+.Say {
+    grid-column: 3 / 5;
+    padding: 3.125rem 0 0 3.125rem;
+    animation: fadeLeft 2s ease 1 both;
+}
+
+.Say-h3 {
+    color: #8f6843;
+    font-size: 1.875rem;
+    margin-bottom: 1.25rem;
+}
+
+.Say-p {
+    max-width: 21.875rem;
+    margin-bottom: 1.875rem;
+    font-size: 1.1875rem;
+    line-height: 1.875rem;
+    color: #635c55;
+}
+
+.Say-nombre {
+    color: #8f6843;
+    margin-bottom: .625rem;
+}
+
+.Say-profesion {
+    color: #635c55;
+}
+
+.Main-mapa {
+    grid-column: 1 / 3;
+}
+
+.Mapa {
+    width: 100%;
+}
+
+.Superb {
+    grid-column: 3 / 5;
+    grid-row: 3 / 5;
+    background: url("https://stockholm70.qodeinteractive.com/wp-content/uploads/2020/08/main-img-5.jpg") center / cover ;
+    padding: 3.125rem 0 0 3.125rem;
+}
+
+.Superb-h2 {
+    font-size: 4.375rem;
+    color: white;
+    margin-bottom: 1.25rem;
+    max-width: 6.25rem;
+}
+
+.Superb-p {
+    color: white;
+    margin-bottom: 2.5rem;
+    max-width: 23.125rem;
+    font-size: 1.1875rem;
+    line-height: 1.875rem;
+}
+
+.Superb-a {
+    color: white;
+    display: inline;
+    background-color: #d6b99d;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+}
+
+.Main-image {
+    background: url("https://stockholm70.qodeinteractive.com/wp-content/uploads/2020/07/main-img-3.jpg") center / cover;
+}
+
+.Wave {
+    margin: auto;
+    max-width: 12.5rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1.25rem;
+}
+
+.Wave-img {
+    width: 3.75rem;
+}
+
+.Wave-h3 {
+    color: #8f6843;
+    font-size: 1.875rem;
+}
+
+.Wave-p {
+    color: #635c55;
+    font-size: 1.1875rem;
+    line-height: 1.875rem;
+}
+
+@media (max-width: 950px) {
+    .Main {
+        grid-template-columns: repeat(2 , 1fr);
+        grid-template-rows: repeat(8 , 1fr);
+    }
+    .Hear {
+        grid-column: 1 / 3;
+        grid-row: 1 / 3;
+    }
+    .Hear-p {
+        max-width: 37.5rem;
+    }
+    .App {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+    }
+    .App-h2 {
+        max-width: 18.75rem;
+    }
+    .Video {
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+    }
+    .Say {
+        grid-column: 1 / 3;
+        grid-row: 4 / 5;
+    }
+    .Say-p {
+        max-width: 34.375rem;
+    }
+    .Mapa {
+        grid-column: 1 / 3;
+        grid-row: 5 / 6;
+    }
+    .Main-image {
+        grid-column: 1 / 2;
+        grid-row: 6 / 7;
+    }
+    .Wave {
+        grid-column: 2 / 3;
+        grid-row: 6 / 7;
+    }
+    .Superb {
+        grid-column: 1 / 3;
+        grid-row: 7 / 9;
+    }
+    .Superb-h2 {
+        max-width: 37.5rem;
+    }
+    .Superb-p {
+        max-width: 37.5rem;
+    }
+}
+
+@media (max-width: 650px) {
+    .Main {
+        display: block;
+    }
+    .Hear {
+        min-height: 90vh;
+        padding: 3.125rem 1.5625rem;
+        background: url("https://stockholm70.qodeinteractive.com/wp-content/uploads/2020/07/main-img-1.jpg") no-repeat right / cover;
+    }
+    .Hear-h2 {
+        font-size: 3.4375rem;
+    }
+    .Hear-p {
+        max-width: 37.5rem;
+    }
+    .App {
+        padding: 5.625rem 1.5625rem;
+    }
+    .App-h2 {
+        max-width: 37.5rem;
+    }
+    .Video {
+        min-height: 60vh;
+    }
+    .Say {
+        padding: 3.125rem;
+    }
+    .Say-p {
+        max-width: 34.375rem;
+    }
+    .Mapa {
+        padding: 3.125rem;
+    }
+    .Main-image {
+        min-height: 40vh;
+    }
+    .Wave {
+        padding: 8.125rem 1.875rem;
+        max-width: 37.5rem;
+    }
+    .Superb {
+        min-height: 90vh;
+        padding: 3.125rem 1.5625rem;
+    }
+    .Superb-h2 {
+        max-width: 37.5rem;
+        font-size: 3.4375rem;
+    }
+    .Superb-p {
+        max-width: 37.5rem;
+    }
+}
+
+.anchocompleto {
+    background-color: #f5ece0;
+}
+
+.Newsletter {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem 0;
+}
+
+.Newsletter-h3 {
+    color: #8f6843;
+    font-size: 2.1875rem;
+}
+
+.Newsletter-form {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 11.25rem;
+    border-bottom: .0625rem solid #8f6843;
+}
+
+.Newsletter-email {
+    margin-bottom: .3125rem;
+}
+
+.Newsletter-email:focus {
+    outline-color: #f5ece0;
+}
+
+.Newsletter-submit {
+    margin-bottom: .3125rem;
+}
+
+.Newsletter-icon {
+    width: .875rem;
+    color: #8f6843;
+}
+
+@media (max-width: 750px) {
+    .Newsletter {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .Newsletter-h3 {
+        margin-bottom: 2.5rem;
+    }
+    .Newsletter-form {
+        gap: 5rem;
+
+    }
+}
+
+.Bottom {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 5rem 0;
+}
+
+.Logo-img {
+    width: 6.25rem;
+    margin-bottom: 2.3125rem;
+}
+
+.Links-li {
+    color: #8f6843;
+    margin-bottom: .9375rem;
+}
+
+.Help-ul {
+    margin-bottom: 3.125rem;
+}
+
+.Help-li {
+    color: #8f6843;
+    margin-bottom: .9375rem;
+}
+
+.Rrss-ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: .625rem;
+}
+
+.Rrss-li {
+    height: 2.1875rem;
+    width: 2.1875rem; 
+    border-radius: 50%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.Rrss-li:hover {
+    height: 2.1875rem;
+    width: 2.1875rem; 
+    border-radius: 50%;
+    background-color: #f5ece0;
+}
+
+.Rrss-icon {
+    color: #8f6843;
+    width: 1.125rem;
+}
+
+.Arriba {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: #8f6843;
+    position: fixed;
+    bottom: 1.875rem;
+    right: 1.875rem;
+
+}
+
+.Arriba-icon {
+    width: 0.7rem;
+    color: white;
+}
+
+@media (max-width: 1000px) {
+    .Bottom {
+        flex-flow: wrap;
+        align-items: flex-start;
+        margin-left: 17%;
+    }
+    .Logo , .Links , .Help {
+        width: calc(100% / 2);
+        margin-bottom: 3.75rem;
+    }
+}
+
+@media (max-width: 750px) {
+    .Bottom {
+        flex-flow: wrap;
+        align-items: flex-start;
+        margin-left: 10%;
+    }
+    .Logo , .Links , .Help {
+        width: 100%;
+        margin-bottom: 3.125rem;
+    }
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes fadeRight {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes fadeLeft {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
