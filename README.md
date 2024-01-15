@@ -1,5 +1,5 @@
 # stockholm-demo-70
-Copycat de la web demo Stockholm 70.
+Copycat responsive de la web demo Stockholm 70.
 
 <h2>Interesting Links:</h2>
 <a href="https://alejandroochandodev.github.io/stockholm-demo-70/">Live Site</a><br>
